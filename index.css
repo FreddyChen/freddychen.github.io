@@ -16,13 +16,13 @@
 
     #header {
         width: 100%;
-        height: 60vh;
+        height: 62vh;
         background: rgb(45, 29, 49);
     }
 
     #content {
         width: 100%;
-        height: 40vh;
+        height: 38vh;
         background: #f0fffa;
     }
 }
