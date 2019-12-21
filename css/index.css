@@ -1,0 +1,594 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+    box-sizing: border-box;
+    outline: none
+}
+
+/* 手机 */
+@media screen and (max-width: 960px){
+    body {
+        height: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        /*background: linear-gradient(-90deg, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%);*/
+        background: #ffffff;
+    }
+
+    #header {
+        width: 100%;
+        height: 62vh;
+        background: rgb(45, 29, 49);
+    }
+
+    #content {
+        width: 100%;
+        height: 38vh;
+        background: #f0fffa;
+    }
+}
+
+/* PC */
+@media screen and (min-width: 960px){
+    body {
+        height: 100%;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        /*background: linear-gradient(-90deg, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%);*/
+        background: #ffffff;
+    }
+
+    #header {
+        width: 100%;
+        height: 40vh;
+        background: rgb(45, 29, 49);
+    }
+
+    #content {
+        width: 100%;
+        height: 60vh;
+        background: #f0fffa;
+    }
+}
+
+.align_horiz_center {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+
+.user_info {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.user_info #avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 100%;
+    margin-top: 36px;
+}
+.user_info #nickname {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 14px;
+}
+.user_info #position {
+    color: #cccccc;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 18px;
+}
+.user_info .professional_skills {
+    color: #cccccc;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 6px;
+    word-wrap: break-word;
+}
+.user_info #blog_wrap {
+    width: 100%;
+    margin-top: 12px;
+    text-align: center;
+}
+.user_info .blog_logo {
+    width: 36px;
+    height: 36px;
+    margin-left: 18px;
+    border-radius: 100%;
+}
+
+:after, :before {
+    box-sizing: inherit
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+ul {
+    list-style: none
+}
+
+.col-sm-4 {
+    float: left;
+    position: relative;
+    width: 33.33333333%
+}
+
+.selected-solution {
+    height: 100%;
+    background: #f1f3ff
+}
+
+.selected-solution > div {
+    position: relative;
+    width: 100%;
+    padding: 0 48px 0;
+    margin: 0 auto
+}
+
+.selected-solution .swiper-container {
+    height: 100%;
+    width: 100%;
+    /*padding: 0 48px 0;*/
+}
+
+.selected-solution .layer-title {
+    color: #393b40;
+    padding: 50px 0 30px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1px
+}
+
+/*主体列表*/
+.selected-solution .solution-cardlist {
+    max-width: 1200px;
+    margin: 20px auto 0
+}
+
+.swiper-slide, .swiper-wrapper {
+    height: 560px !important
+}
+
+.selected-solution .solution-cardlist .col-sm-4 {
+    padding: 0 10px;
+    top: 0;
+    transition: all .15s linear;
+    box-sizing: border-box
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card {
+    height: 480px;
+    background: #fff;
+    border-radius: 6px;
+    text-align: left;
+    overflow: hidden;
+    transition: all .15s linear
+}
+
+.selected-solution .solution-cardlist .col-sm-4:hover {
+    position: relative;
+    top: -20px;
+    transition: all .25s linear
+}
+
+.selected-solution .solution-cardlist .col-sm-4:hover .solution-card {
+    height: 530px;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .1);
+    transition: all .2s linear
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card img {
+    width: auto;
+    height: 200px;
+    transition: all .2s linear
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card h3 {
+    margin: 20px 30px 10px;
+    font-size: 18px;
+    color: #252b3a;
+    letter-spacing: .65px;
+    text-align: left
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card p {
+    margin: 0 30px;
+    padding-bottom: 30px;
+    font-size: 14px;
+    color: #666a75;
+    letter-spacing: .51px
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card dl {
+    margin: 0 30px;
+    overflow: visible
+}
+
+.cf:after, .cf:before {
+    content: " ";
+    display: table;
+    line-height: 0
+}
+
+.cf:after {
+    clear: both
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card dl dt {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #252b3a;
+    letter-spacing: .51px;
+    line-height: 19px;
+    position: relative
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card dl dt:before {
+    position: absolute;
+    display: inline-block;
+    left: -8px;
+    top: 7px;
+    content: '';
+    vertical-align: middle;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #252b3a
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card dl dd {
+    float: left;
+    width: 50%;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #a0a2a8;
+    letter-spacing: .44px;
+    line-height: 20px
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card > span {
+    margin: 20px 30px 0;
+    font-size: 14px;
+    display: inline-block;
+    color: #666a75;
+    letter-spacing: .51px;
+    line-height: 22px;
+    opacity: 0;
+    transition: opacity .15s linear
+}
+
+.selected-solution .solution-cardlist .col-sm-4:hover .solution-card > span {
+    opacity: 1;
+    transition: opacity .2s linear 50ms
+}
+
+/*了解更多*/
+.selected-solution .solution-cardlist .col-sm-4 .solution-card > span a span {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card > span a span.arrow-f {
+    width: 13px;
+    height: 13px;
+    background: url(../images/marketplace-selected-arrow0.svg);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    transition: .3s ease-out
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card > span a:hover {
+    color: #e6c16c
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card > span a:hover span.arrow-f {
+    transform: translate(4px, 0);
+    background: url(../images/marketplace-selected-arrow2.svg)
+}
+
+/*重置swiper*/
+.swiper-container-horizontal > .swiper-pagination-bullets.solution-pagination {
+    bottom: 15px
+}
+
+.solution-pagination .swiper-pagination-bullet {
+    width: 24px;
+    height: 4px;
+    border-radius: 100px;
+    overflow: hidden;
+    background: #dfe1f1;
+    border: none;
+    cursor: pointer;
+    content: '';
+    display: inline-block;
+    box-sizing: border-box;
+    opacity: 1;
+    vertical-align: middle
+}
+
+.solution-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #f66f6a;
+    box-sizing: border-box
+}
+
+.swiper-container-solution .swiper-button-prev {
+    left: 10px;
+    width: 14px;
+    height: 30px;
+    margin-top: 0;
+    background-image: url(../images/marketplace-home-arrow_big.svg);
+    background-size: cover;
+    transition: background-image .15s
+}
+
+.swiper-container-solution .swiper-button-next {
+    right: 10px;
+    width: 14px;
+    height: 30px;
+    margin-top: 0;
+    background-image: url(../images/marketplace-home-arrow_big.svg);
+    transform: rotate(180deg);
+    background-size: cover;
+    transition: background-image .15s
+}
+
+.swiper-container-solution .swiper-button-next:hover, .swiper-container-solution .swiper-button-prev:hover {
+    background-image: url(../images/marketplace-home-arrow_big_hover.svg);
+    transition: background-image .2s
+}
+
+:after, :before {
+    box-sizing: inherit
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+ul {
+    list-style: none
+}
+
+.col-sm-4 {
+    float: left;
+    position: relative;
+    width: 33.33333333%
+}
+
+.selected-solution {
+    height: 100%;
+    background: #f1f3ff
+}
+
+.selected-solution > div {
+    position: relative;
+    width: 100%;
+    padding: 0 48px 0;
+    margin: 0 auto
+}
+
+.selected-solution .swiper-container {
+    height: 100%;
+    width: 100%;
+    /*padding: 0 48px 0;*/
+}
+
+.selected-solution .layer-title {
+    color: #393b40;
+    padding: 50px 0 30px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1px
+}
+
+/*主体列表*/
+.selected-solution .solution-cardlist {
+    max-width: 1200px;
+    margin: 20px auto 0
+}
+
+.swiper-slide, .swiper-wrapper {
+    height: 560px !important
+}
+
+.selected-solution .solution-cardlist .col-sm-4 {
+    padding: 0 10px;
+    top: 0;
+    transition: all .15s linear;
+    box-sizing: border-box
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card {
+    height: 480px;
+    background: #fff;
+    border-radius: 6px;
+    text-align: left;
+    overflow: hidden;
+    transition: all .15s linear
+}
+
+.selected-solution .solution-cardlist .col-sm-4:hover {
+    position: relative;
+    top: -20px;
+    transition: all .25s linear
+}
+
+.selected-solution .solution-cardlist .col-sm-4:hover .solution-card {
+    height: 530px;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .1);
+    transition: all .2s linear
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card img {
+    width: auto;
+    height: 200px;
+    transition: all .2s linear
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card h3 {
+    margin: 20px 30px 10px;
+    font-size: 18px;
+    color: #252b3a;
+    letter-spacing: .65px;
+    text-align: left
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card p {
+    margin: 0 30px;
+    padding-bottom: 30px;
+    font-size: 14px;
+    color: #666a75;
+    letter-spacing: .51px
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card dl {
+    margin: 0 30px;
+    overflow: visible
+}
+
+.cf:after, .cf:before {
+    content: " ";
+    display: table;
+    line-height: 0
+}
+
+.cf:after {
+    clear: both
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card dl dt {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #252b3a;
+    letter-spacing: .51px;
+    line-height: 19px;
+    position: relative
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card dl dt:before {
+    position: absolute;
+    display: inline-block;
+    left: -8px;
+    top: 7px;
+    content: '';
+    vertical-align: middle;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #252b3a
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card dl dd {
+    float: left;
+    width: 50%;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #a0a2a8;
+    letter-spacing: .44px;
+    line-height: 20px
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card > span {
+    margin: 20px 30px 0;
+    font-size: 14px;
+    display: inline-block;
+    color: #666a75;
+    letter-spacing: .51px;
+    line-height: 22px;
+    opacity: 0;
+    transition: opacity .15s linear
+}
+
+.selected-solution .solution-cardlist .col-sm-4:hover .solution-card > span {
+    opacity: 1;
+    transition: opacity .2s linear 50ms
+}
+
+/*了解更多*/
+.selected-solution .solution-cardlist .col-sm-4 .solution-card > span a span {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card > span a span.arrow-f {
+    width: 13px;
+    height: 13px;
+    background: url(../images/marketplace-selected-arrow0.svg);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    transition: .3s ease-out
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card > span a:hover {
+    color: #e6c16c
+}
+
+.selected-solution .solution-cardlist .col-sm-4 .solution-card > span a:hover span.arrow-f {
+    transform: translate(4px, 0);
+    background: url(../images/marketplace-selected-arrow2.svg)
+}
+
+/*重置swiper*/
+.swiper-container-horizontal > .swiper-pagination-bullets.solution-pagination {
+    bottom: 15px
+}
+
+.solution-pagination .swiper-pagination-bullet {
+    width: 24px;
+    height: 4px;
+    border-radius: 100px;
+    overflow: hidden;
+    background: #dfe1f1;
+    border: none;
+    cursor: pointer;
+    content: '';
+    display: inline-block;
+    box-sizing: border-box;
+    opacity: 1;
+    vertical-align: middle
+}
+
+.solution-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #f66f6a;
+    box-sizing: border-box
+}
+
+.swiper-container-solution .swiper-button-prev {
+    left: 10px;
+    width: 14px;
+    height: 30px;
+    margin-top: 0;
+    background-image: url(../images/marketplace-home-arrow_big.svg);
+    background-size: cover;
+    transition: background-image .15s
+}
+
+.swiper-container-solution .swiper-button-next {
+    right: 10px;
+    width: 14px;
+    height: 30px;
+    margin-top: 0;
+    background-image: url(../images/marketplace-home-arrow_big.svg);
+    transform: rotate(180deg);
+    background-size: cover;
+    transition: background-image .15s
+}
+
+.swiper-container-solution .swiper-button-next:hover, .swiper-container-solution .swiper-button-prev:hover {
+    background-image: url(../images/marketplace-home-arrow_big_hover.svg);
+    transition: background-image .2s
+}
