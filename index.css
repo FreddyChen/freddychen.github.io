@@ -57,12 +57,34 @@
     border-radius: 100%;
     margin-top: 36px;
 }
-
 .user_info #nickname {
     color: #ffffff;
     font-size: 1.2rem;
     text-align: center;
     margin-top: 14px;
+}
+.user_info #position {
+    color: #cccccc;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 18px;
+}
+.user_info .professional_skills {
+    color: #cccccc;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 6px;
+}
+.user_info #blog_wrap {
+    width: 100%;
+    margin-top: 12px;
+    text-align: center;
+}
+.user_info .blog_logo {
+    width: 36px;
+    height: 36px;
+    margin-left: 18px;
+    border-radius: 100%;
 }
 
 .checkbox-wrap {
