@@ -35,6 +35,7 @@
 </div>
 
 <div id="content">
+<!--    <button type="button" onclick="test()">点我试试</button>-->
     <div class="swiper-container-solution">
         <div class="selected-solution">
             <div>
@@ -114,8 +115,7 @@
     });
 
     function test() {
-        console.log("test");
-        const url = 'http://www.baidu.com'; // url
+        const url = 'https://api.github.com/users'; // url
         $.ajax({
             url: url,
             dataType: 'jsonp',
