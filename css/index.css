@@ -330,7 +330,7 @@ ul {
 .selected-solution > div {
     position: relative;
     width: 100%;
-    padding: 0 48px 0;
+    padding: 0 2vw 0;
     margin: 0 auto
 }
 
@@ -385,12 +385,6 @@ ul {
     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .1);
     transition: all .2s linear
 }
-
-/*.selected-solution .solution-cardlist .col-sm-4 .solution-card img {*/
-/*    width: auto;*/
-/*    height: 200px;*/
-/*    transition: all .2s linear*/
-/*}*/
 
 .selected-solution .solution-cardlist .col-sm-4 .solution-card p {
     margin: 0 30px;
