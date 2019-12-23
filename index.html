@@ -2,135 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>FreddyChen的个人博客</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
-
-    <!--插件基本框架-->
-    <link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <script type="text/javascript">
+        window.onload = function() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            if(/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(userAgent)) {
+                window.location.href = "mobile/homepage.html"
+            }else {
+                window.location.href = "pc/homepage.html"
+            }
+        }
+    </script>
 </head>
 <body>
-<div id="header">
-    <div class="user_info">
-        <img src="images/avatar.jpg" id="avatar" class="align_horiz_center" alt="头像"/>
-        <h2 id="nickname">FreddyChen的个人博客</h2>
-        <h3 id="position">Android开发工程师</h3>
-        <h3 class="professional_skills">6年Android开发经验，熟练掌握利用Java/Kotlin</h3>
-        <h3 class="professional_skills">熟悉各类即时通信技术，包括TCP/UDP/WebSocket/串口通信</h3>
-        <h3 class="professional_skills">主导开发过多款完整应用，包含区块链/社交/直播/机器人通信</h3>
-        <h3 class="professional_skills">
-            熟悉JavaWeb开发主流技术：SpringMVC/SpringBoot/JavaScript/H5/CSS/MySQL/Redis/Nginx/Zookeeper/Kafka</h3>
-        <h3 class="professional_skills">熟悉Dart语言，掌握Flutter应用开发</h3>
-        <h3 class="professional_skills">熟悉Objective-c/Swift语言，掌握IOS应用开发</h3>
-
-        <div id="blog_wrap">
-            <a href="https://github.com/FreddyChen" target="_blank"><img class="blog_logo" src="images/github.png" alt="Github"></a>
-            <a href="https://juejin.im/user/5bd7affbe51d4547f763fe72" target="_blank"><img class="blog_logo" src="images/juejin.png"
-                                                                           alt="掘金"></a>
-            <a href="https://www.jianshu.com/u/c447298e7813" target="_blank"><img class="blog_logo" src="images/jianshu.png"
-                                                                  alt="简书"></a>
-        </div>
-    </div>
-</div>
-
-<div id="content">
-<!--    <button type="button" onclick="test()">点我试试</button>-->
-    <div class="swiper-container-solution">
-        <div class="selected-solution">
-            <div>
-                <div class="swiper-container">
-                    <div class="layer-title">文章列表</div>
-                    <div class="solution-cardlist swiper-wrapper">
-                        <div class="col-sm-4 swiper-slide">
-                            <div class="solution-card">
-                                <img src="images/marketplace-selected-solution_0.png" width="760" class="cover_img">
-                                <h3 class="article_title_text">开源一个自用的Android IM库，基于Netty+TCP+Protobuf实现</h3>
-                                <p>第一篇文章</p>
-                                <div><a href="https://github.com/FreddyChen/NettyChat" target="_blank"><img class="github_logo" src="https://img.shields.io/github/stars/FreddyChen/NettyChat?label=Github%20stars&style=social"/></a></div>
-                                <span><a href="https://juejin.im/post/5c97ae12e51d45580b681b0b" target="_blank"><span
-                                        class="arrow-more">去看看</span><span class="arrow-f"></span></a>
-							</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 swiper-slide">
-                            <div class="solution-card">
-                                <img src="images/marketplace-selected-solution_1.png" width="760" class="cover_img">
-                                <h3 class="article_title_text">开源一个自用的Android事件分发中心库，实现类似系统广播功能</h3>
-                                <p>第二篇文章</p>
-                                <div><a href="https://github.com/FreddyChen/CEventCenter" target="_blank"><img class="github_logo" src="https://img.shields.io/github/stars/FreddyChen/CEventCenter?label=Github%20stars&style=social"/></a></div>
-                                <span><a href="https://juejin.im/post/5cbe81f75188250a85160d72" target="_blank"><span
-                                        class="arrow-more">去看看</span><span class="arrow-f"></span></a>
-							    </span>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 swiper-slide">
-                            <div class="solution-card">
-                                <img src="images/zhihuitingche.jpg" width="760" class="cover_img">
-                                <h3 class="article_title_text">个人博客开源项目</h3>
-                                <p>第三篇文章</p>
-                                <div><a href="https://github.com/FreddyChen/freddychen.github.io" target="_blank"><img class="github_logo" src="https://img.shields.io/github/stars/FreddyChen/freddychen.github.io?label=Github%20stars&style=social"/></a></div>
-                                <span><a href="#" target="_blank"><span class="arrow-more">去看看</span><span
-                                        class="arrow-f"></span></a>
-							</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination solution-pagination"></div>
-                </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-    $(function () {
-        new Swiper(".swiper-container", {
-
-            /*默认功能属性*/
-            speed: 250,
-            slidesPerView: 3,
-            spaceBetween: 0,
-            slidesPerGroup: 3,
-            loop: true,
-            autoplay: true,
-
-            /*分页索引*/
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-
-            /*分页按钮*/
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev"
-            }
-
-        });
-    });
-
-    function test() {
-        const url = 'https://api.github.com/users'; // url
-        $.ajax({
-            url: url,
-            dataType: 'jsonp',
-            processData: false,
-            type: 'get',
-            success: function (data) {
-                console.log(data);
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                alert(XMLHttpRequest.status);
-                alert(XMLHttpRequest.readyState);
-                alert(textStatus);
-            }
-        });
-    }
-</script>
 </body>
 </html>
